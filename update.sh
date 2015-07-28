@@ -36,7 +36,7 @@ then
 		echo "OLDSMVER2 $OLDSMVER2"
 	fi
 # If the first or second newversion exceeds the first or second old version
-	if [ "$NEWSMVERSION1" -gt "$OLDSMVER1" ] || [ "$NEWSMVERSION2" -gt "$OLDSMVER2" ] || [ "$2" = "force" ]
+	if [ "$NEWSMVERSION1" -gt "$OLDSMVER1" ] || [ "$NEWSMVERSION2" -gt "$OLDSMVER2" ] || [ "$1" = "force" ]
 	then 
 		echo "Newer Version Detected"
 # Set the field seperator to new line and then store the chucksums as an array with each element being a line
