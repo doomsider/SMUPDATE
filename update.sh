@@ -3,8 +3,7 @@
 # Requires curl to be installed
 # Grab the releaseindex as a very long string variable
 echo "This script will install/update StarMade from the master repo.  Use ./update.sh force to force a check on all files"
-local dummy
-	read -s -r -p "Press any key to continue..." -n 1 dummy
+read -s -r -p "Press any key to continue..." -n 1 dummy
 if command -v curl >/dev/null
 then
 	echo "Curl was found"
