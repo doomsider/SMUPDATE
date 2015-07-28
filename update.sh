@@ -2,6 +2,9 @@
 # Starmade Selective upgrade script for BASH.  Please run in the parent or root directory of Starmade
 # Requires curl to be installed
 # Grab the releaseindex as a very long string variable
+echo "This script will install/update StarMade from the master repo.  Use ./update.sh force to force a check on all files"
+local dummy
+	read -s -r -p "Press any key to continue..." -n 1 dummy
 if command -v curl >/dev/null
 then
 	echo "Curl was found"
@@ -34,7 +37,7 @@ then
 		echo "OLDSMVER2 $OLDSMVER2"
 	fi
 # If the first or second newversion exceeds the first or second old version
-	if [ "$NEWSMVERSION1" -gt "$OLDSMVER1" ] || [ "$NEWSMVERSION2" -gt "$OLDSMVER2" ]
+	if [ "$NEWSMVERSION1" -gt "$OLDSMVER1" ] || [ "$NEWSMVERSION2" -gt "$OLDSMVER2" ] || [ "$2" = "force" ]
 	then 
 		echo "Newer Version Detected"
 # Set the field seperator to new line and then store the chucksums as an array with each element being a line
