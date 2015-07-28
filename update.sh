@@ -18,7 +18,7 @@ then
 	echo "NEWSMVERSION2 $NEWSMVERSION2"
 # Gather the old version from the version.txt file in StarMade
 	oldversion=$(cat StarMade/version.txt)
-	if [ -z "$OLDCKSUMSTRING" ]
+	if [ -z "$oldversion" ]
 	then
 		echo "No install found for StarMade"
 		OLDSMVER1=0
