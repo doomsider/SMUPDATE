@@ -91,6 +91,8 @@ then
 			fi
 			let LINECOUNT++
 		done
+# Added to make sure version.txt is updated.  Sometimes the checksum will match despite the file being different.  This behaviour seems to be limited to very small text files with minor differences that happen to equal each other according to the way checksum calculates file size.
+		curl "http://files.star-made.org$newversion/version.txt" > "$CONFIGDTSD_INSTALLPATH/StarMade/version.txt"
 	else
 		echo "Version Current"
 	fi
